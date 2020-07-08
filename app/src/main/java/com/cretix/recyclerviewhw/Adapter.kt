@@ -65,9 +65,11 @@ class Adapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         private val textName = root.name
         private val textGrade = root.grade
         private val textLink = root.btn_github
+        private val img = root.imageView
         private val v = root
 
         fun onBind(name: String, grade: String, link: String) {
+            img.clipToOutline = true
             textName.text = name
             textGrade.text = grade
             textLink.setOnClickListener {

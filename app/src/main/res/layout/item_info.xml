@@ -23,6 +23,9 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:text="@string/project_idea"
+            android:textColor="@android:color/primary_text_light"
+            android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
