@@ -18,7 +18,8 @@ class MainActivity : AppCompatActivity() {
             SkillHeader(false),
             Skill("PHP", ">2 лет"),
             Skill("Python", ">3 лет"),
-            Skill("C++", ">3 лет")
+            Skill("C++", ">3 лет"),
+            Skill("C#", "<1 года")
         )
         recycler.adapter = Adapter().apply { items = items_ }
     }
