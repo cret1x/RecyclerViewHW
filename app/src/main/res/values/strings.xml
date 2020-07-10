@@ -6,4 +6,6 @@
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eget purus mattis purus tincidunt tempor et non dolor. Sed vitae laoreet orci. In hac habitasse platea dictumst. Nullam in hendrerit magna. Morbi quis velit vestibulum, porttitor neque et, condimentum augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut lobortis arcu eget augue sollicitudin, quis ullamcorper dui rutrum. Nulla justo nibh, malesuada ac libero vitae, luctus tincidunt diam. Cras in est massa. Pellentesque non risus vel velit varius ullamcorper non quis lacus. Fusce eu felis ante. Nam enim leo, aliquet et porttitor a, vulputate eget nunc. Quisque vitae porttitor justo.</string>
     <string name="project_idea">Идея Проекта</string>
     <string name="skills">Навыки</string>
+    <string name="filter_all">Все</string>
+    <string name="btn_apply">Применить</string>
 </resources>

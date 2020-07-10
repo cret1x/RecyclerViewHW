@@ -1,5 +1,6 @@
 package com.cretix.recyclerviewhw
 
+import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.view.LayoutInflater
@@ -9,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_header.view.*
 import kotlinx.android.synthetic.main.item_info.view.*
 import kotlinx.android.synthetic.main.item_skills.view.*
+import kotlinx.android.synthetic.main.item_skills_header.view.*
 
 class Adapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     private val TYPE_HEADER = 1
@@ -79,6 +81,7 @@ class Adapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             }
         }
     }
+
     private class InfoViewHolder(root: View) : RecyclerView.ViewHolder(root) {
         private val textHeader = root.header_info
         private val textText = root.text_info
@@ -87,13 +90,23 @@ class Adapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             textText.text = text
         }
     }
-    private class HeaderSkillsViewHolder(root: View) : RecyclerView.ViewHolder(root) {
+    inner class HeaderSkillsViewHolder(root: View) : RecyclerView.ViewHolder(root) {
+        private val icon = root.filtered
         fun onBind(filtered: Boolean) {
+            icon.setOnClickListener {
+                (it.context as Activity).startActivityForResult(Intent(it.context, FilterActivity::class.java), 1337)
+            }
+            if (filtered) {
+                icon.setImageResource(R.drawable.ic_filter_active)
+            } else {
+                icon.setImageResource(R.drawable.ic_filter)
+            }
         }
     }
     private class SkillsViewHolder(root: View) : RecyclerView.ViewHolder(root) {
         private val skillName = root.skill_name
         private val skillLength = root.duration
+        private val v = root
 
         fun onBind(name: String, length: String) {
             skillName.text = name
