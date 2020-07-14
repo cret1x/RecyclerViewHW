@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
         private var filters = listOf<YearFilter>()
     }
 
-
     private val filtered_skills = listOf(
         Skill("PHP", ">2 лет", 750),
         Skill("JS", ">2 лет", 750),
@@ -44,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         filters = if (savedInstanceState?.getSerializable(KEY_SEL) != null) {
             savedInstanceState.getSerializable(KEY_SEL) as List<YearFilter>
         } else {
-            listOf( YearFilter(-1, 999999999, "", prefs!!.getBoolean("0", true), true))
+            listOf(YearFilter(-1, 999999999, "", prefs!!.getBoolean("0", true), true))
         }
     }
 
