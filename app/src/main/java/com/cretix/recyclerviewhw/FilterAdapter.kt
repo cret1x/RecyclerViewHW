@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.item_filter.view.*
 
 class FilterAdapter(ctx: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-    private var prefs: SharedPreferences = ctx.getSharedPreferences("FILTER", Context.MODE_PRIVATE)
+    var prefs: SharedPreferences = ctx.getSharedPreferences("FILTER", Context.MODE_PRIVATE)
 
     var items: List<YearFilter> = listOf()
         set(value) {

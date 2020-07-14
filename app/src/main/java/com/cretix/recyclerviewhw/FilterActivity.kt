@@ -23,10 +23,10 @@ class FilterActivity : AppCompatActivity() {
         prefs = getSharedPreferences("FILTER", Context.MODE_PRIVATE)
         recycler.layoutManager = LinearLayoutManager(this)
         val items_ = listOf(
-            YearFilter(-1, 999999999, "", prefs!!.getBoolean("0", false), true),
-            YearFilter(0, 365, "<1 года", prefs!!.getBoolean("1", false), false),
-            YearFilter(720, 999999999, ">2 лет", prefs!!.getBoolean("2", false), false),
-            YearFilter(1095, 999999999, ">3 лет", prefs!!.getBoolean("3", false), false)
+            YearFilter(-1, 999999999, "", prefs!!.getBoolean("0", true), true),
+            YearFilter(0, 365, "<1 года", prefs!!.getBoolean("1", true), false),
+            YearFilter(720, 999999999, ">2 лет", prefs!!.getBoolean("2", true), false),
+            YearFilter(1095, 999999999, ">3 лет", prefs!!.getBoolean("3", true), false)
         )
 
         val isChecked: (YearFilter) -> Boolean = { it.checked }
